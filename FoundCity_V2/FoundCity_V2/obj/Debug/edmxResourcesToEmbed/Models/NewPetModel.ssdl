@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewPetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserFirstName" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="UserLastName" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="UserGender" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Account" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Telephone" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="AuthCode" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="IsAdmin" Type="bit" Nullable="false" />
+    <Property Name="UserStatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="NewPetModelStoreContainer">
+    <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
